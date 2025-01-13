@@ -3,7 +3,7 @@ package com.yupi.yupicturebackend.manager.websocket.disruptor;
 import com.lmax.disruptor.RingBuffer;
 import com.lmax.disruptor.dsl.Disruptor;
 import com.yupi.yupicturebackend.manager.websocket.model.PictureEditRequestMessage;
-import com.yupi.yupicturebackend.model.entity.User;
+import com.yupi.yupicture.domain.user.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.WebSocketSession;

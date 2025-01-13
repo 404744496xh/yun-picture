@@ -1,10 +1,10 @@
 package com.yupi.yupicturebackend.manager.sharding;
 
 import com.baomidou.mybatisplus.extension.toolkit.SqlRunner;
-import com.yupi.yupicturebackend.model.entity.Space;
-import com.yupi.yupicturebackend.model.enums.SpaceLevelEnum;
-import com.yupi.yupicturebackend.model.enums.SpaceTypeEnum;
-import com.yupi.yupicturebackend.service.SpaceService;
+import com.yupi.yupicture.domain.space.entity.Space;
+import com.yupi.yupicture.domain.space.valueobject.SpaceLevelEnum;
+import com.yupi.yupicture.domain.space.valueobject.SpaceTypeEnum;
+import com.yupi.yupicture.application.service.SpaceApplicationService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shardingsphere.driver.jdbc.core.connection.ShardingSphereConnection;
 import org.apache.shardingsphere.infra.metadata.database.rule.ShardingSphereRuleMetaData;
@@ -12,7 +12,6 @@ import org.apache.shardingsphere.mode.manager.ContextManager;
 import org.apache.shardingsphere.sharding.api.config.ShardingRuleConfiguration;
 import org.apache.shardingsphere.sharding.api.config.rule.ShardingTableRuleConfiguration;
 import org.apache.shardingsphere.sharding.rule.ShardingRule;
-import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
@@ -32,7 +31,7 @@ public class DynamicShardingManager {
     private DataSource dataSource;
 
     @Resource
-    private SpaceService spaceService;
+    private SpaceApplicationService spaceApplicationService;
 
     private static final String LOGIC_TABLE_NAME = "picture";
 
@@ -49,7 +48,7 @@ public class DynamicShardingManager {
      */
     private Set<String> fetchAllPictureTableNames() {
         // 为了测试方便，直接对所有团队空间分表（实际上线改为仅对旗舰版生效）
-        Set<Long> spaceIds = spaceService.lambdaQuery()
+        Set<Long> spaceIds = spaceApplicationService.lambdaQuery()
                 .eq(Space::getSpaceType, SpaceTypeEnum.TEAM.getValue())
                 .list()
                 .stream()

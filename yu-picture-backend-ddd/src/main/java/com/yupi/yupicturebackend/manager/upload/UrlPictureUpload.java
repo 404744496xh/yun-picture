@@ -6,9 +6,9 @@ import cn.hutool.http.HttpResponse;
 import cn.hutool.http.HttpStatus;
 import cn.hutool.http.HttpUtil;
 import cn.hutool.http.Method;
-import com.yupi.yupicturebackend.exception.BusinessException;
-import com.yupi.yupicturebackend.exception.ErrorCode;
-import com.yupi.yupicturebackend.exception.ThrowUtils;
+import com.yupi.yupicture.infrastructure.exception.BusinessException;
+import com.yupi.yupicture.infrastructure.exception.ErrorCode;
+import com.yupi.yupicture.infrastructure.exception.ThrowUtils;
 import org.springframework.stereotype.Service;
 
 import java.io.File;

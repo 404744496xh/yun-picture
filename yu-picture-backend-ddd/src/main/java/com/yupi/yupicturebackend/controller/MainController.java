@@ -1,7 +1,7 @@
 package com.yupi.yupicturebackend.controller;
 
-import com.yupi.yupicturebackend.common.BaseResponse;
-import com.yupi.yupicturebackend.common.ResultUtils;
+import com.yupi.yupicture.infrastructure.common.BaseResponse;
+import com.yupi.yupicture.infrastructure.common.ResultUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

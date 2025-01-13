@@ -9,10 +9,10 @@ import com.qcloud.cos.model.PutObjectResult;
 import com.qcloud.cos.model.ciModel.persistence.CIObject;
 import com.qcloud.cos.model.ciModel.persistence.ImageInfo;
 import com.qcloud.cos.model.ciModel.persistence.ProcessResults;
-import com.yupi.yupicturebackend.config.CosClientConfig;
-import com.yupi.yupicturebackend.exception.BusinessException;
-import com.yupi.yupicturebackend.exception.ErrorCode;
-import com.yupi.yupicturebackend.manager.CosManager;
+import com.yupi.yupicture.infrastructure.config.CosClientConfig;
+import com.yupi.yupicture.infrastructure.exception.BusinessException;
+import com.yupi.yupicture.infrastructure.exception.ErrorCode;
+import com.yupi.yupicture.infrastructure.api.CosManager;
 import com.yupi.yupicturebackend.model.dto.file.UploadPictureResult;
 import lombok.extern.slf4j.Slf4j;
 

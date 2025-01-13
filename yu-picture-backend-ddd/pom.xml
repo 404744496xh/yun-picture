@@ -160,7 +160,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
                 <configuration>
-                    <mainClass>com.yupi.yupicturebackend.YuPictureBackendApplication</mainClass>
+                    <mainClass>com.yupi.yupicture.YuPictureBackendApplication</mainClass>
                     <skip>true</skip>
                 </configuration>
                 <executions>
