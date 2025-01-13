@@ -11,7 +11,7 @@ import com.yupi.yupicture.infrastructure.exception.ErrorCode;
 import com.yupi.yupicture.infrastructure.exception.ThrowUtils;
 import com.yupi.yupicture.interfaces.assembler.SpaceAssembler;
 import com.yupi.yupicture.interfaces.dto.space.*;
-import com.yupi.yupicturebackend.manager.auth.SpaceUserAuthManager;
+import com.yupi.yupicture.shared.auth.SpaceUserAuthManager;
 import com.yupi.yupicture.domain.space.entity.Space;
 import com.yupi.yupicture.domain.user.entity.User;
 import com.yupi.yupicture.domain.space.valueobject.SpaceLevelEnum;
@@ -19,7 +19,6 @@ import com.yupi.yupicture.interfaces.vo.space.SpaceVO;
 import com.yupi.yupicture.application.service.SpaceApplicationService;
 import com.yupi.yupicture.application.service.UserApplicationService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
