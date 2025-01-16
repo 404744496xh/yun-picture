@@ -6,6 +6,10 @@
 >
 > ⭐️ 加入项目系列学习：[加入编程导航](https://www.codefather.cn/vip)
 
+## 一分钟了解项目
+
+请观看项目介绍和上线教程视频：https://www.bilibili.com/video/BV1akwGeSERK
+
 ## 项目介绍
 
 基于 Vue 3 + Spring Boot + COS + WebSocket 的 **企业级智能协同云图库平台**。
